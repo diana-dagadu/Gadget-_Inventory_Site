@@ -7,6 +7,7 @@
 
 body {
     overflow-x: hidden;
+    color: white;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
     position: fixed;
     width: 300px;
     height: 100%;
-    background: rgb(20, 25, 71);
+    background: rgba(19,19,19,255);
     transition: 0.5s;
     overflow: hidden;
 }
@@ -44,15 +45,19 @@ body {
 }
 
 .navigation ul li :hover {
-    background: rgb(233, 64, 64);
+    background:#ca9926;
+}
+
+.navigation ul li:nth-child(1) :hover {
+    background: transparent;
 }
 
 .navigation ul li:nth-child(1) {
     margin-bottom: 20px;
 }
 
-.navigation ul li:nth-child(1):hover {
-    background: transparent;
+#gadget{
+    color:#ca9926;
 }
 
 .navigation ul li a {
@@ -71,6 +76,16 @@ body {
     height: 60px;
     line-height: 60px;
     text-align: center
+}
+
+.iconMain{
+    margin: auto;
+}
+
+#titleMain{
+    margin-left: 50px;
+    margin-top: 0;
+    font-size: large;
 }
 
 .navigation ul li a .icon .zmdi {
@@ -95,7 +110,7 @@ body {
     width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
-    background: whitesmoke;
+    background: rgb(39, 38, 38);
     transition: 0.4s;
 }
 
@@ -106,7 +121,10 @@ body {
 
 .main .topbar {
     width: 100%;
-    background: whitesmoke;
+
+    background: rgba(19,19,19,255);
+    position: fixed;
+    z-index: 100;
     height: 60px;
     padding: 0 10px;
     display: flex;
@@ -122,7 +140,6 @@ body {
 }
 
 .toggle::before {
-    content: '\f197';
     font-family: fontAwesome;
     position: absolute;
     width: 100%;
@@ -131,6 +148,12 @@ body {
     font-size: 24px;
     text-align: center;
     color: black;
+}
+
+ .toggle i{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
 }
 
 .search {
@@ -150,13 +173,18 @@ body {
     border-radius: 40px;
     padding: 5px 20px;
     padding-left: 35px;
-    border: 1px solid black;
+    border: 1px solid rgb(100, 100, 100);
+    outline: none;
+    color: white;
+    background: rgb(39, 38, 38);
+
 }
 
 .search label .zmdi {
     position: absolute;
     left: 15px;
     top: 4px;
+    color: white;
 }
 
 .user {
@@ -167,6 +195,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    border: 3px solid tomato;
 }
 
 .user img {
@@ -178,6 +207,13 @@ body {
     object-fit: contain;
 }
 
+
+/* Styling the dashbaord cards */
+
+#dashboardTitle{
+    margin-top: 70px;
+    margin-left: 20px;
+}
 .cardBox {
     position: relative;
     width: 100%;
@@ -189,11 +225,11 @@ body {
 
 .cardBox .card {
     position: relative;
-    background: white;
+    background:#ca9926;
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 .cardBox .card .numbers {
@@ -202,13 +238,14 @@ body {
     font-weight: 500;
 }
 
+
 .cardBox .card .cardName {
-    color: grey;
+    color: white;
 }
 
 .cardBox .card .iconBox {
     font-size: 2.5em;
-    color: crimson;
+    color:green;
 }
 
 .details .gadgetList {
@@ -232,37 +269,152 @@ body {
 .btn {
     position: relative;
     padding: 5px 10px;
-    background: crimson;
+    background: green;
+    border: 2px solid green;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    
 }
+
+.btn:hover {
+    border: 2px solid green;
+    background: none;
+    color: green;
+}
+
+#descWidth{
+width: 20%;
+}
+
+#descName{
+    width: 20%;
+    }
+
+#descImage{
+        width: 10%;
+        }
 
 .details table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
+.tableHeader{
+    font-size: 18px;
+    color: rgb(196, 156, 27);
+}
+
+.cat{
+    text-align: center;
+}
+
+.num{
+    text-align: center;
+}
 
 .details table thead td {
     font-weight: 600;
 }
 
+.details table tbody td {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
 .details .gadgetList table tr {
-    border-bottom: 1px solid rgb(196, 194, 194);
+    border-bottom: 1px solid rgb(48, 47, 47);
+}
+
+.green{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: rgb(0, 102, 0);
+    padding-left: 2.5px;
+    padding-top: 9px;
+}
+
+.red{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: rgb(182, 20, 20);
+    padding-left: 2.5px;
+    padding-top: 9px;
+}
+
+.orange{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border-radius: 50%;
+    background-color:rgb(219, 112, 12);
+    padding-left: 2.5px;
+    padding-top: 9px;
 }
 
 .updateIcon1 {
     font-size: 25px;
     font-weight: 500;
-    color: rgb(0, 102, 0);
+    color: white;
+    text-align: center;
+    
     
 }
 
 .updateIcon2 {
     font-size: 25px;
     font-weight: 500;
-    color: rgb(172, 2, 2);
+    color: white;
+    
 }
 
+.iconDiv1{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(0, 102, 0);
+    padding-left: 7px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+
+}
+
+.iconDiv2 {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(172, 2, 2);
+    padding-left: 8px;
+    border-radius: 5px;
+
+}
+
+/* footer section styling */
+/* footer{
+    bottom: 0;
+    background: rgb(29, 26, 26);
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: rgb(12, 206, 175);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+ */
 

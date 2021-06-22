@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Styling the side nav */
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: rgba(19,19,19,255);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 60px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li :hover {
+    background:#ca9926;
+}
+
+.navigation ul li:nth-child(1) :hover {
+    background: transparent;
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+#gadget{
+    color:#ca9926;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center
+}
+
+.iconMain{
+    margin: auto;
+}
+
+#titleMain{
+    margin-left: 50px;
+    margin-top: 0;
+    font-size: large;
+}
+
+.navigation ul li a .icon .zmdi {
+    color: white;
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+
+/* Styling the top bar */
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: rgb(39, 38, 38);
+    transition: 0.4s;
+}
+
+.main.active {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.main .topbar {
+    width: 100%;
+
+    background: rgba(19,19,19,255);
+    position: fixed;
+    z-index: 100;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+ .toggle i{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    border: 1px solid rgb(100, 100, 100);
+    outline: none;
+    color: white;
+    background: rgb(39, 38, 38);
+
+}
+
+.search label .zmdi {
+    position: absolute;
+    left: 15px;
+    top: 4px;
+    color: white;
+}
+
+.user {
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid tomato;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Styling the form */
+
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+    margin-top: 20px;
+    padding-top: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.item_form{
+	background: #4b4e48;
+	padding: 25px;
+	border-radius: 8px;
+	width: 700px;
+}
+
+.item_form .title{
+	text-align: center;
+	font-size: 30px;
+	color: rgb(196, 156, 27);
+	letter-spacing: 5px;
+	font-weight: 700;
+}
+
+#description{
+    height: 80px;
+}
+
+.form_wrap .input_wrap{
+	margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+	margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+	display: block;
+	margin-bottom: 3px;
+	color: #9597a6;
+}
+
+.form_wrap .input_grp{
+	display: flex;
+}
+
+.form_wrap .input_grp  input {
+	width: 310px;
+}
+
+#qty{
+    margin-left: 30px;
+}
+
+.form_wrap  input {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap .submit_btn{
+	width: 50%;
+    margin-left: 25%;
+	background: rgb(196, 156, 27);
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	letter-spacing: 3px;
+    color: white;
+	cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form_wrap .submit_btn:hover{
+	background: none;
+    border: 1px solid rgb(196, 156, 27);
+}

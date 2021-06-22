@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Inventory Site</title>
+    <link rel="stylesheet" href="addItem.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="iconMain"><img src="/images/logo.png" alt=""></span>
+                        <span class="title">
+                            <a href="index.html" id="titleMain"><h2>The<span id="gadget">Gadget</span>  Shop</h2></a>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-view-dashboard"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-plus-square"></i></span>
+                        <span class="title">Add Item</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-email"></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-account"></i></span>
+                        <span class="title">Account</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-help-outline"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="zmdi zmdi-settings"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Topbar -->
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle"><i class="zmdi zmdi-menu"></i></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="search">
+                        <i class="zmdi zmdi-search"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="images/dp.jpg">
+                </div>
+            </div>
+            
+            <!-- Form -->
+            <div class="wrapper">
+                <div class="item_form">
+                    <div class="title">
+                        Item Form
+                    </div>
+            
+                    <form>
+                        <div class="form_wrap">
+                            <div class="input_grp">
+                                <div class="input_wrap">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name">
+                                </div>
+                                <div class="input_wrap" id="qty">
+                                    <label>Quantity Available</label>
+                                    <input type="text" id="qtyAvailable">
+                                </div>
+                            </div>
+                            <div class="input_wrap">
+                                <label>Image URL</label>
+                                <input type="text" id="image">
+                            </div>
+                        
+                            <div class="input_wrap">
+                                <label >Item Categorty</label>
+                                <input type="text" id="category">
+                            </div>
+                            <div class="input_wrap">
+                                <label >Item Description</label>
+                                <input type="text" id="description">
+                            </div>
+                            <div class="input_wrap">
+                                <input type="submit" value="Add Item" class="submit_btn">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+            </div>
+        </div>
+
+    </div>
+     <!-- footer -->
+
+</body>
+ <!-- footer section start -->
+ <footer>
+    <span>Designed By <a href="https://www.linkedin.com/in/diana-dede-dagadu/" target="_blank">Diana Dagadu</a> | <span
+            class="far fa-copyright"></span> 2021 All rights reserved.</span>
+</footer>
+ 
+<script src="script.js"></script>
+
+</html>
