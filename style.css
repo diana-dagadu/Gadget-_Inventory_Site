@@ -401,20 +401,24 @@ width: 20%;
 
 }
 
-/* footer section styling */
-/* footer{
-    bottom: 0;
-    background: rgb(29, 26, 26);
+/* footer section styling  */
+ footer{
+    background: rgba(19,19,19,255);
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 footer span a{
-    color: rgb(12, 206, 175);
+    color: #ca9926;
     text-decoration: none;
 }
 footer span a:hover{
     text-decoration: underline;
+   
 }
- */
+
 

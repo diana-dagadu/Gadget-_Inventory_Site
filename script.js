@@ -1,6 +1,7 @@
+// ToggleHandler
 
 let toggle = document.querySelector('.toggle');
-
+// console.log(toggle);
 function toggleMenu() {
     let navigation = document.querySelector('.navigation');
     let main = document.querySelector('.main');
@@ -9,4 +10,61 @@ function toggleMenu() {
     main.classList.toggle('active')
 }
 
-toggle.addEventListener('click',toggleMenu)
+toggle.addEventListener('click', toggleMenu)
+
+
+
+// Submit form and display success message
+
+let msgWrap = document.querySelector('.msgWrap');
+let submit_btn = document.querySelector('.submit_btn');
+const submitHandler = (event) => {
+    event.preventDefault()
+    msgWrap.classList.add('show')
+}
+submit_btn.addEventListener('click', submitHandler)
+
+
+// Adding item script
+
+let addItemBtn = document.querySelector('.submit_btn')
+addItemBtn.addEventListener("click", () => {
+    let name = document.querySelector("#name").value
+    let quantity = document.querySelector("#qtyAvailable").value
+    let imageURL = document.querySelector("#image").value
+    let category = document.querySelector("#category").value
+    let description = document.querySelector("#description").value
+
+    if (name.trim() === '' ||
+        imageURL.trim() === '' ||
+        category.trim() === '' ||
+        description.trim() === '' ||
+        quantity.trim() === '' ||
+        isNaN(quantity)) {
+        alert('Please enter valid values')
+    }
+    else {
+        const itemDetails = {
+            name: name,
+            quantity: quantity,
+            imageURL: imageURL,
+            category: category,
+            description: description
+        }
+        if (localStorage.getItem('itemDetails')) {
+            let productDetailsArray = JSON.parse(localStorage.getItem("itemDetails"));
+            productDetailsArray.push(itemDetails);
+            localStorage.setItem('itemDetails', JSON.stringify(productDetailsArray));
+        }
+        else {
+            let productDetails = [itemDetails]
+            localStorage.setItem('itemDetails', JSON.stringify(productDetails));
+        }
+        // movieStore.push(itemDetails)
+        // clearInputs()
+
+    }
+
+})
+
+
