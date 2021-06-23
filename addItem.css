@@ -90,7 +90,7 @@ body {
 
 .navigation ul li a .icon .zmdi {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navigation ul li a .title {
@@ -255,8 +255,12 @@ body {
 	font-weight: 700;
 }
 
-#description{
-    height: 80px;
+#description2{
+    height: 70px;
+    border-radius: 3px;
+	border: 1px solid #9597a6;
+	outline: none;
+    padding: 10px;
 }
 
 .form_wrap .input_wrap{
@@ -320,6 +324,7 @@ body {
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    font-size: 11px;
     position: fixed;
     left: 0;
     bottom: 0;

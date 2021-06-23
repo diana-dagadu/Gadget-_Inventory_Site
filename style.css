@@ -90,7 +90,7 @@ body {
 
 .navigation ul li a .icon .zmdi {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navigation ul li a .title {
@@ -121,7 +121,6 @@ body {
 
 .main .topbar {
     width: 100%;
-
     background: rgba(19,19,19,255);
     position: fixed;
     z-index: 100;
@@ -189,13 +188,15 @@ body {
 
 .user {
     position: relative;
+    margin-right: 300px;
     min-width: 50px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 10;
     cursor: pointer;
-    border: 3px solid tomato;
+    border: 2px solid black;
 }
 
 .user img {
@@ -204,7 +205,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 
@@ -338,6 +339,7 @@ width: 20%;
     background-color: rgb(0, 102, 0);
     padding-left: 2.5px;
     padding-top: 9px;
+    /* 20 and above */
 }
 
 .red{
@@ -349,6 +351,7 @@ width: 20%;
     background-color: rgb(182, 20, 20);
     padding-left: 2.5px;
     padding-top: 9px;
+    /* 0 */
 }
 
 .orange{
@@ -360,6 +363,7 @@ width: 20%;
     background-color:rgb(219, 112, 12);
     padding-left: 2.5px;
     padding-top: 9px;
+    /* between 0 and 20 */
 }
 
 .updateIcon1 {
@@ -407,6 +411,7 @@ width: 20%;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    font-size: 11px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -422,3 +427,103 @@ footer span a:hover{
 }
 
 
+/* Styling the delete modal */
+
+  #backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+  }
+  
+  #backdrop.visible {
+    display: block;
+    pointer-events: all;
+  }
+
+  
+  .modal {
+    position: fixed;
+    z-index: 100;
+    background: white;
+    border-radius: 10px;
+    width: 50%;
+    top: 30vh;
+    left: 30%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: none;
+  }
+  
+  .modal.visible {
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+  }
+  
+  .modal .modal__title {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid #ca9926;
+    background: #d30808;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .modal .modal__content {
+    padding: 1rem;
+    color: black;
+  }
+  
+  .modal .modal__actions {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  .btn1 {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    /* border: 1px solid #00329e;
+    background: #00329e; */
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  
+  
+  
+  .btn1--passive {
+    color: white;
+    background:grey;
+    border: 1px solid grey;
+    border: none;
+  }
+  
+  .btn1--passive:hover,
+  .btn1--passive:active {
+    background: none;
+    border: 2px solid gray;
+    color: black;
+  }
+  
+  .btn1--danger {
+    background: #d30808;
+    color: white;
+    border-color: #d30808;
+  }
+  
+  .btn1--danger:hover,
+  .btn1--danger:active {
+    background: none;
+    border-color: #ff3217;
+    color: black;
+  }
+  #description2{
+    padding: 15px;
+  }

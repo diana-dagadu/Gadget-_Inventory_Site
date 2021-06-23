@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="backdrop"></div>
     <div class="container">
 
         <!-- Navigation -->
@@ -21,7 +22,9 @@
                     <a href="index.html">
                         <span class="iconMain"><img src="/images/logo.png" alt=""></span>
                         <span class="title">
-                            <a href="index.html" id="titleMain"><h2>The<span id="gadget">Gadget</span>  Shop</h2></a>
+                            <a href="index.html" id="titleMain">
+                                <h2>The<span id="gadget">Gadget</span> Shop</h2>
+                            </a>
                         </span>
                     </a>
                 </li>
@@ -82,16 +85,19 @@
                     </label>
                 </div>
                 <div class="user">
+                    wertyu
                     <img src="images/dp.jpg">
                 </div>
             </div>
 
             <!-- Dashboard cards -->
-            <div id="dashboardTitle"><h2>Dashboard</h2></div>
+            <div id="dashboardTitle">
+                <h2>Dashboard</h2>
+            </div>
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="numbers">9</div>
+                        <div id="noi"class="numbers"></div>
                         <div class="cardName">Total No. of Items</div>
                     </div>
                     <div class="iconBox">
@@ -100,7 +106,7 @@
                 </div>
                 <div class="card">
                     <div>
-                        <div class="numbers">7</div>
+                        <div id="itemsInStock" class="numbers">7</div>
                         <div class="cardName">Items in Stock</div>
                     </div>
                     <div class="iconBox">
@@ -164,16 +170,22 @@
                             </tr>
                         </thead>
                         <tbody id="products">
-                            <tr>
+                            <!-- <tr>
                                 <td><img src="/images/lenovo_laptop.png" alt=""></td>
                                 <td>Lenovo Flex 5 </td>
                                 <td>14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U
                                     Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics </td>
                                 <td class="cat">Laptop</td>
-                                <td class="num"> <div class="green">28</div></td>
+                                <td class="num">
+                                    <div class="green">28</div>
+                                </td>
 
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/Acer_Laptop.png" alt=""></td>
@@ -181,10 +193,16 @@
                                 <td>15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB
                                     SSD, Backlit Keyboard, Silver</td>
                                 <td class="cat">Laptop</td>
-                                <td class="num"> <div class="orange">5</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
-                                   
+                                <td class="num">
+                                    <div class="orange">5</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td><img src="/images/marvue_tablet.png" alt=""></td>
@@ -192,9 +210,15 @@
                                 <td>10.1 Inch Tablet Android 10 Tablets, 2GB RAM 32GB Storage, 8MP+5MP Dual Camera,
                                     Wi-Fi, Bluetooth, HDMI, FM, GPS, 6000mAh Battery </td>
                                 <td class="cat">Tablet</td>
-                                <td class="num"> <div class="orange">15</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td class="num">
+                                    <div class="orange">15</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/samsungfe_phone.png" alt=""></td>
@@ -202,9 +226,15 @@
                                 <td>5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone Pro-Grade Camera
                                     30X Space Zoom Night Mode, Cloud Navy</td>
                                 <td class="cat">Phone</td>
-                                <td class="num"> <div class="red">0</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></span></td>
+                                <td class="num">
+                                    <div class="red">0</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/windows_tablet.png" alt=""></td>
@@ -212,18 +242,30 @@
                                 <td>Ultra Slim Windows 10 Tablet PC - 4GB RAM 64GB Storage, 5MP and 2MP Cameras,
                                     1280x800 IPS HD Display, Black</td>
                                 <td class="cat">Tablet</td>
-                                <td class="num"> <div class="green">31</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td class="num">
+                                    <div class="green">31</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/iPhone-12-Pro-Max.png" alt=""></td>
                                 <td>New Apple iPhone 12 Pro Max </td>
                                 <td>128GB, Graphite) [Locked] + Carrier Subscription</td>
                                 <td class="cat">Phone</td>
-                                <td class="num"> <div class="green">45</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td class="num">
+                                    <div class="green">45</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/lenovo_tablet.png" alt=""></td>
@@ -231,9 +273,15 @@
                                 <td>10.3" FHD Android Tablet, Octa-Core Processor, <br> 64GB Storage, 4GB RAM, Iron
                                     Grey, ZA5T0300US</td>
                                 <td class="cat">Tablet</td>
-                                <td class="num"> <div class="red">0</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td class="num">
+                                    <div class="red">0</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="/images/samsung_note_9_phone.png" alt=""></td>
@@ -241,35 +289,59 @@
                                     Note 9 </td>
                                 <td>128GB, Lavender Purple - Fully Unlocked (Renewed)</td>
                                 <td class="cat">Phone</td>
-                                <td class="num"> <div class="green">43</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
+                                <td class="num">
+                                    <div class="green">43</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
                             </tr>
-                            <tr>
+                             <tr>
                                 <td><img src="/images/LG_phone.png" alt=""></td>
                                 <td>LG G7 ThinQ </td>
                                 <td>LM-G710TM TMobile 64GB Android Smartphone (Renewed) (Platinum Gray)</td>
                                 <td class="cat">Phone</td>
-                                <td class="num"> <div class="orange">17</div></td>
-                                <td><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div> 
-                                    <div class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></td>
-                            </tr>
+                                <td class="num">
+                                    <div class="orange">17</div>
+                                </td>
+                                <td>
+                                    <div class="iconDiv1"><span class="updateIcon1"><i
+                                                class="zmdi zmdi-edit"></i></span></div>
+                                    <div class="iconDiv2"><span class="updateIcon2"><i
+                                                class="zmdi zmdi-delete"></i></span></div>
+                                </td>
+                            </tr> 
                         </tbody>
                     </table>
                 </div>
 
             </div>
+            <!-- Delete message modal -->
+            <div class="modal" id="delete-modal">
+                <h2 class="modal__title">Message</h2>
+                <p class="modal__content">
+                    Are you sure you want to delete this item?  This action can't be
+                    undone!
+                </p>
+                <input type="hidden" id="itemIndex">    
+                <div class="modal__actions">
+                    <button class="btn1 btn1--passive">Cancel</button>
+                    <button class="btn1 btn1--danger">Yes</button>
+                </div>
+            </div>
         </div>
 
     </div>
-     <!-- footer -->
+    <!-- footer -->
 
-     <footer>
-        <span>Designed By <a href="https://www.linkedin.com/in/diana-dede-dagadu/" target="_blank">Diana Dagadu</a> | <span
-                class="far fa-copyright"></span> 2021 All rights reserved.</span>
+    <footer>
+        <span>Designed By <a href="https://www.linkedin.com/in/diana-dede-dagadu/" target="_blank">Diana Dagadu</a> |
+            <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
-     
-    <script src="script.js"></script>
+
     <script src="index.js"></script>
 </body>
 
