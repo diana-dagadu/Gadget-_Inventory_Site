@@ -50,7 +50,7 @@ const messageHandler = (event) => {
     setTimeout(() => {
         msgWrap.classList.remove('show');
         setTimeout(() => {
-            window.location.href = "/updateItem.html";
+            window.location.href = "../html/updateItem.html";
         }, 500)
     }, 1000)
 }

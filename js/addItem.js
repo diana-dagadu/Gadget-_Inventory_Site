@@ -20,7 +20,7 @@ const messageHandler = (event) => {
     setTimeout(() => {
         msgWrap.classList.remove('show');
         setTimeout(() => {
-            window.location.href = "/addItem.html";
+            window.location.href = "../html/addItem.html";
         }, 500)
     }, 1500)
 }

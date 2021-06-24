@@ -528,3 +528,10 @@ footer span a:hover{
   #description2{
     padding: 15px;
   }
+.dede td:nth-child(6){
+    display: flex;
+}
+td:nth-child(6) div{
+    margin: 50px 5px;
+    
+}

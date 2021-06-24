@@ -10,6 +10,7 @@ const colorHandler = (quantity) => {
         default:
             return "green";
     }
+
     
 }
 const editItem = (index) => {
@@ -32,13 +33,13 @@ const displayItems = () => {
 
             // itemTD.innerHTML
             itemCode += `
-            <tr>
+            <tr class="dede">
         <td><img src="${localStorageProducts[i].imageURL}"></td>
             <td>${localStorageProducts[i].name}</td>
             <td>${localStorageProducts[i].description}</td>
             <td class="cat">${localStorageProducts[i].category}</td>
             <td class="num"> <div class=${colorHandler(localStorageProducts[i].quantity)}>${localStorageProducts[i].quantity}</div></td>
-            <td><a onclick="editItem(${i});" href="updateItem.html"><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div></a>
+            <td><a onclick="editItem(${i});" href="../html/updateItem.html"><div class="iconDiv1"><span class="updateIcon1"><i class="zmdi zmdi-edit"></i></span></div></a>
                 <div onclick="deleteItemHandler(${i})" class="iconDiv2"><span class="updateIcon2"><i class="zmdi zmdi-delete"></i></span></div></span></td>
                 </tr>
     `
@@ -47,7 +48,7 @@ const displayItems = () => {
         prod.innerHTML = itemCode;
     }
 
-    // console.log(pro)
+    
 
 }
 displayItems();
@@ -104,7 +105,7 @@ const deleteHandler = (index) => {
     displayItems();
     updateItem();
     countOutOfStock();
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
 
 
 }
