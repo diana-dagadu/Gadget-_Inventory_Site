@@ -1,6 +1,18 @@
+
+let toggle = document.querySelector('.toggle');
+// console.log(toggle);
+function toggleMenu() {
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    toggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+    main.classList.toggle('active')
+}
+
+toggle.addEventListener('click', toggleMenu)
+
+
 // Submit form and display success message
-
-
 
 const messageHandler = (event) => {
     event.preventDefault()
