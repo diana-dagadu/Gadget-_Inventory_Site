@@ -54,13 +54,14 @@ displayItems();
 
 const updateItem = () => {
     let noi = document.getElementById('noi');
-    let numberOfItems = (JSON.parse(localStorage.getItem("itemDetails")).length);
-    
-    if (localStorage.getItem("itemDetails")) {
-        noi.innerText = (JSON.parse(localStorage.getItem("itemDetails"))).length;
-    }
-    else noi.innerText = '0';
+    let numberOfItems = localStorage.getItem("itemDetails") ? (JSON.parse(localStorage.getItem("itemDetails")).length) : 0;
+    noi.innerText = numberOfItems > 0 ? numberOfItems : '0';
+    // if (localStorage.getItem("itemDetails")) {
+    //     noi.innerText = (JSON.parse(localStorage.getItem("itemDetails"))).length;
+    // }
+    // else noi.innerText = '0';
 }
+
 const countOutOfStock = () => {
     let items = JSON.parse(localStorage.getItem("itemDetails"));
     let availableItems = [];

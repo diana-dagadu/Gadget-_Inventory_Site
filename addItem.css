@@ -230,8 +230,8 @@ body {
     width: 12rem;
     padding: 1rem;
     margin: 0 auto;
-    background-color:rgb(196, 156, 27);
-    color: rgb(39, 38, 38);
+    background-color:rgb(72, 158, 72);
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -239,12 +239,17 @@ body {
     transform: translateY(-300%);
 }
 
+
+.msgWrap i{
+    color: white;
+}
+
 .msgWrap.show{   
     transform: translateY(0%);
 }
 
 .msgWrap .message{
-    color:rgb(39, 38, 38);
+    color:white;
 }
 
 .item_form .title{
@@ -261,6 +266,7 @@ body {
 	border: 1px solid #9597a6;
 	outline: none;
     padding: 10px;
+    width: 650px;
 }
 
 .form_wrap .input_wrap{

@@ -9,8 +9,8 @@ const messageHandler = (event) => {
         msgWrap.classList.remove('show');
         setTimeout(() => {
             window.location.href = "/addItem.html";
-        }, 1000)
-    }, 3000)
+        }, 500)
+    }, 1500)
 }
 
 // Adding item script
