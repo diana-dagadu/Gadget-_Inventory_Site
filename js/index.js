@@ -1,3 +1,86 @@
+
+let storeItems = []
+const onLoadMethod = () => {
+    if (!localStorage.getItem("itemDetails")) {
+        storeItems = [
+            {
+                name: `Samsung Galaxy Note 9`,
+                quantity: 23,
+                imageURL: `/images/samsung_note_9_phone.png`,
+                category: `Phone`,
+                description: `128GB, Lavender Purple - Fully Unlocked (Renewed)`,
+
+            },
+            {
+                name: `Lenovo Flex 5`,
+                quantity: 28,
+                imageURL: `/images/lenovo_laptop.png`,
+                category: `Laptop`,
+                description: `14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500UProcessor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics `,
+               
+            },
+            {
+                name: `MARVUE Pad M20 Tablet`,
+                quantity: 17,
+                imageURL: `/images/marvue_tablet.png`,
+                category: `Tablet`,
+                description: `10.1 Inch Tablet Android 10 Tablets, 2GB RAM 32GB Storage, 8MP+5MP Dual Camera,
+                                    Wi-Fi, Bluetooth, HDMI, FM, GPS, 6000mAh Battery`,
+             
+            },
+            {
+                name: `SAMSUNG Galaxy S20 FE`,
+                quantity: 0,
+                imageURL: `/images/samsungfe_phone.png`,
+                category: `Phone`,
+                description: `14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500UProcessor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics 5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone Pro-Grade Camera
+                                    30X Space Zoom Night Mode, Cloud Navy`,
+             
+            },
+            {
+                name: `Acer Aspire 5 Slim Laptop`,
+                quantity: 13,
+                imageURL: `/images/Acer_Laptop.png`,
+                category: `Laptop`,
+                description: `15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB
+                                    SSD, Backlit Keyboard, Silver`,
+              
+            },
+            {
+                name: `Windows Tablet 10in`,
+                quantity: 39,
+                imageURL: `/images/windows_tablet.png`,
+                category: `Tablet`,
+                description: `Ultra Slim Windows 10 Tablet PC - 4GB RAM 64GB Storage, 5MP and 2MP Cameras,
+                                    1280x800 IPS HD Display, Black`,
+
+            },
+            {
+                name: `Apple iPhone 12 Pro Max`,
+                quantity: 0,
+                imageURL: `/images/iPhone-12-Pro-Max.png`,
+                category: `Phone`,
+                description: `128GB, Graphite) [Locked] + Carrier Subscription`,
+
+            },
+            {
+                name: `LG G7 ThinQ`,
+                quantity: 9,
+                imageURL: `/images/LG_phone.png`,
+                category: `Phone`,
+                description: `LM-G710TM TMobile 64GB Android Smartphone (Renewed) (Platinum Gray)`,
+
+            },
+           
+        ]
+
+        localStorage.setItem(`itemDetails`, JSON.stringify(storeItems))
+        console.log(storeItems);
+    }
+}
+onLoadMethod()
+
+
 const colorHandler = (quantity) => {
 
     switch (true) {
@@ -69,10 +152,17 @@ const countOutOfStock = () => {
     if (items) {
         items.forEach(item => {
             if (parseInt(item.quantity) > 0) {
-                availableItems.push(item);
+                // console.log(item.quantity)
+                // console.log(availableItems.reduce((a,b) => a+b,0))
+                let sum = (availableItems.reduce((a, b) => a + b, 0))
+                console.log(sum)
+                availableItems.push(item.quantity);
             }
         });
-        document.getElementById("itemsInStock").innerText = availableItems.length;
+        // document.getElementById("itemsInStock").innerText = availableItems.length;
+        let sum = (availableItems.reduce((a, b) => a + b, 0))
+        console.log(sum)
+        document.getElementById("itemsInStock").innerText = sum;
     }
     else {
         document.getElementById("itemsInStock").innerText = '0';
